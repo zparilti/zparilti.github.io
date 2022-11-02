@@ -26,4 +26,4 @@
 
 <p>You can change the default colors of links</p>
 
-<a href="https://www.youtube.com/watch?v=JvAxsWvqtbk" target="_blank">vid</a> 
+<a href="https://www.youtube.com/watch?v=JvAxsWvqtbk" target="_blank">VIDEO</a> 
