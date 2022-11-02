@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
+
 
 <h2>Link Colors</h2>
 
@@ -10,6 +6,5 @@
 
 <a href="html_images.asp" target="_blank">HTML Images</a> 
 
-</body>
-</html>
+
 
