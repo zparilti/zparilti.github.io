@@ -1,8 +1,8 @@
 
 
-<h1>Colors</h1>
+<h4>Colors</h4>
 
-<h2>Link Colors</h2>
+<h5>Link Colors</h5>
 
 
 <p>You can change the default colors of links</p>
