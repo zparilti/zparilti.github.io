@@ -2,7 +2,7 @@
 
 <h3>Colors</h3>
 
-<h5>Link Colors</h5>
+<p>Link Colors</p>
 
 
 <p>You can change the default colors of links</p>
