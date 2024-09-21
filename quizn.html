@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html><head>
+<style>
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: sans-serif;
+    padding: 1rem;
+    background-color: orange;
+}
+.quiz,
+.choices {
+    list-style-type: none;
+    padding: 0;
+}
+.choices li {
+    margin-bottom: 5px;
+}
+.choices label {
+    display: flex;
+    align-items: center;
+}
+.choices label,
+input[type="radio"] {
+    cursor: pointer;
+}
+input[type="radio"] {
+    margin-right: 8px;
+}
+.view-results {
+    padding: 1rem;
+    cursor: pointer;
+    font-size: inherit;
+    color: white;
+    background: teal;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+.my-results {
+    padding: 1rem;
+    border: 1px solid goldenrod;
+}
+</style>
+
+</head>
+
+<body>
+<script>
+var answers = ["A", "C", "B"],
+    tot = answers.length;
+function getCheckedValue(radioName) {
+    var radios = document.getElementsByName(radioName);
+    for (var y = 0; y < radios.length; y++)
+        if (radios[y].checked) return radios[y].value;
+}
+function getScore() {
+    var score = 0;
+    for (var i = 0; i < tot; i++)
+        if (getCheckedValue("question" + i) === answers[i]) score += 1;
+    return score;
+}
+function returnScore() {
+    document.getElementById("myresults").innerHTML =
+        "You got " + getScore() + "/" + tot;
+    if (getScore() > 2) {
+        console.log("Bravo");
+    }
+}
+
+</script>
+
+
+<ul class="quiz">
+    <li>
+        <h4>How?</h4>
+        <ul class="choices">
+            <li>
+                <label
+                    ><input type="radio" name="question0" value="A" /><span
+                        >one</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question0" value="B" /><span
+                        >two</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question0" value="C" /><span
+                        >three</span
+                    ></label
+                >
+            </li>
+            <li>
+                <label
+                    ><input type="radio" name="question0" value="D" /><span
+                        >four</span
+                    ></label
+                >
+            </li>
+        </ul>
+    </li>
+    
+    
+</ul>
+<button class="view-results" onclick="returnScore()">See Grade</button>
+<span id="myresults" class="my-results">Results</span>
+
+</body>
+</html>
